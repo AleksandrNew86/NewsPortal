@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-12 20:08+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\News\choice.py:8
+msgid "Article"
+msgstr "Статья"
+
+#: .\News\choice.py:9
+#, fuzzy
+#| msgid "News list"
+msgid "News"
+msgstr "Новость"
+
+#: .\News\filters.py:10
+msgid "Any type"
+msgstr "Любой тип"
+
+#: .\News\filters.py:11
+msgid "Post type"
+msgstr "Тип поста"
+
+#: .\News\filters.py:15 .\News\forms.py:19
+#: .\News\templates\News\list_news.html:15
+#: .\News\templates\News\news_search.html:18
+msgid "Title"
+msgstr "Название"
+
+#: .\News\filters.py:18 .\News\templates\News\list_news.html:17
+#: .\News\templates\News\news.html:12 .\News\templates\News\news_search.html:20
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: .\News\forms.py:17
+msgid "Category"
+msgstr "Категория"
+
+#: .\News\forms.py:18
+msgid "Athour"
+msgstr "Автор"
+
+#: .\News\forms.py:20 .\News\templates\News\list_news.html:19
+#: .\News\templates\News\news_search.html:22
+msgid "Text"
+msgstr "Текст"
+
+#: .\News\templates\News\article_create.html:8
+msgid "Creating article"
+msgstr "Создание категории"
+
+#: .\News\templates\News\article_create.html:12
+#: .\News\templates\News\news_edit.html:12
+#: .\sign\templates\sign\user_edit.html:14
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\News\templates\News\default.html:26
+msgid "News list"
+msgstr "Список новостей"
+
+#: .\News\templates\News\default.html:38
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\News\templates\News\default.html:41
+msgid "My profile"
+msgstr "Мой профиль"
+
+#: .\News\templates\News\default.html:45
+msgid "Login"
+msgstr "Войти"
+
+#: .\News\templates\News\default.html:48
+msgid "Signup"
+msgstr "Зарегистрироваться"
+
+#: .\News\templates\News\default.html:70
+#: .\News\templates\News\timezones.html:19
+msgid "set"
+msgstr "выбрать"
+
+#: .\News\templates\News\default.html:75
+#: .\News\templates\News\timezones.html:13
+msgid "Timezone"
+msgstr "Временная зона"
+
+#: .\News\templates\News\list_news.html:11
+#: .\News\templates\News\news_search.html:10
+#, fuzzy
+#| msgid "Number f articles per page"
+msgid "Number of articles per page"
+msgstr "Количество статей на странице"
+
+#: .\News\templates\News\list_news.html:12
+#: .\News\templates\News\news_search.html:11
+msgid "All articles"
+msgstr "Все статьи"
+
+#: .\News\templates\News\list_news.html:21
+#: .\News\templates\News\news_search.html:24
+msgid "Read completely"
+msgstr "Читать полностью"
+
+#: .\News\templates\News\news.html:14
+msgid "Article categories"
+msgstr "Категории статьи"
+
+#: .\News\templates\News\news.html:18
+msgid "Unsubscribe from"
+msgstr "Отписаться от"
+
+#: .\News\templates\News\news.html:25
+msgid "Subscribe to"
+msgstr "Подписаться на"
+
+#: .\News\templates\News\news_delete.html:8
+msgid "Deleting an article"
+msgstr "Удаление статьи"
+
+#: .\News\templates\News\news_delete.html:11
+msgid "Are you sure you want to delete the article"
+msgstr "Вы уверены, что хотите удалить статью"
+
+#: .\News\templates\News\news_delete.html:12
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\News\templates\News\news_edit.html:8
+msgid "Creating/editing news"
+msgstr "Создание/редактирование новости"
+
+#: .\News\templates\News\news_search.html:14
+msgid "Search"
+msgstr "Найти"
+
+#: .\News\templates\News\timezones.html:9
+msgid "Choose your timezone"
+msgstr "Выберите свою временную зону"
+
+#: .\sign\forms.py:20
+msgid "username"
+msgstr "пользователь"
+
+#: .\sign\forms.py:20
+msgid "email"
+msgstr "электронная почта"
+
+#: .\sign\forms.py:20
+msgid "first_name"
+msgstr "Имя"
+
+#: .\sign\forms.py:20
+msgid "last_name"
+msgstr "Фамилия"
+
+#: .\sign\templates\sign\logout.html:5
+msgid "You are logged out"
+msgstr "Вы вышли из системы"
+
+#: .\sign\templates\sign\user_edit.html:10
+msgid "User editing"
+msgstr "Редактирование пользователя"
+
+#: .\sign\templates\sign\user_edit.html:18
+msgid "Become an author"
+msgstr "Стать автором"
+
+#: .\sign\templates\sign\user_edit.html:22
+msgid "My Subscriptions"
+msgstr "Мои подписки"
+
+#: .\sign\templates\sign\user_edit.html:29
+msgid "You do not have permission to edit this user's profile"
+msgstr "Вы не имеете прав редактировть данного пользователя"

@@ -1,0 +1,15 @@
+{% extends 'News/default.html' %}
+{% load i18n %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<h1>{% trans "Creating article" %}:</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value='{% trans "Save" %}'>
+</form>
+
+{% endblock content %}

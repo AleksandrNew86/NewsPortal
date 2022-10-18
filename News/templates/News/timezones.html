@@ -1,0 +1,22 @@
+{% extends 'News/default.html' %}
+{% load i18n %}
+{% load tz %}
+{% block title %}
+Timezones
+{% endblock title %}
+
+{% block content %}
+<h1>{% trans "Choose your timezone" %}:</h1>
+{% get_current_timezone as TIME_ZONE %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label name="timezone">{% trans "Timezone" %}:</label>
+        <select name="timezone">
+            {% for tz in timezones %}
+            <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}>{{ tz }}</option>
+            {% endfor %}
+        </select>
+    <input type="submit" value='{% trans "set" %}'>
+</form>
+
+{% endblock content %}

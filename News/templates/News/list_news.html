@@ -1,0 +1,39 @@
+
+{% extends 'News/default.html' %}
+{% load i18n %}
+{% load custom_tags %}
+{% block title %}
+
+All news
+{% endblock title %}
+
+{% block content %}
+<h2>{% trans "Number of articles per page" %}: {{ news|length }}</h2>
+<h1>{% trans "All articles" %}:</h1>
+<hr />
+{% for i in news %}
+    {% trans "Title" %}: <b>"{{ i.title_post }}"</b>
+    <br />
+    {% trans "Publication date" %}: <i>{{ i.date_creation| date:'d m Y' }}</i>
+    <br />
+    {% trans "Text" %}: <i>{{ i.text_post | truncatechars:20 }}</i>
+    <br />
+    <button><a class="nav-link" style="color: black" href="{% url 'news_details' i.pk %}">{% trans "Read completely" %}</a></button>
+    <hr />
+
+{% endfor %}
+{% if page_obj.has_previous %}
+    <a href="?{% url_replace page=1 %}">1</a>
+    {% if page_obj.previous_page_number != 1 %}
+        <a class="nav-link" href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+    {% endif %}
+{% endif %}
+{{ page_obj.number }}
+{% if page_obj.has_next %}
+    <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+    {% if page_obj.next_page_number != paginator.num_pages %}
+    <a href="?{% url_replace page=paginator.num_pages %}">{{ paginator.num_pages }}</a>
+    {% endif %}
+{% endif %}
+{% endblock content %}
+

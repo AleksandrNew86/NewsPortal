@@ -1,0 +1,15 @@
+{% extends 'News/default.html' %}
+{% load i18n %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<h1>{% trans "Deleting an article" %}:</h1>
+<form action="" method="post">
+    {% csrf_token %}
+<p>{% trans "Are you sure you want to delete the article" %}: <b>"{{ object.title_post }}"</b>? </p>
+    <input type="submit" value='{% trans "Delete" %}'>
+</form>
+
+{% endblock content %}

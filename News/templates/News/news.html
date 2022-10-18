@@ -1,0 +1,38 @@
+{% extends 'News/default.html' %}
+{% load i18n %}
+{% load custom_filters %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<h3>{{ news.title_post }}</h3>
+<br />
+{{ news.text_post}}
+<p align="right"><i>{% trans "Publication date" %}: {{ news.date_creation | date:'d.m.Y' }}</i></p>
+<div align="right">
+    <h3><i>{% trans "Article categories" %}</i>:</h3>
+
+    {% for i in categories %}
+    {% if request.user in i|get_subscribes and request.user.is_authenticated %}
+        <b>{% trans "Unsubscribe from" %}:</b>
+        <form method="post" action="">
+        {% csrf_token %}
+            <input type="submit" value="{{ i.name_category }}" name="delete_category">
+        </form>
+     <br />
+    {% elif  request.user.is_authenticated %}
+        <b>{% trans "Subscribe to" %}:</b>
+        <form method="post" action="">
+        {% csrf_token %}
+            <input type="submit" value="{{ i.name_category }}" name="add_category">
+       </form>
+     <br />
+    {% else %}
+        | {{ i }} |
+    {% endif %}
+{% endfor %}
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'News/default.html' %}
+
+{% load i18n %}
+{% block title %}
+User
+{% endblock title %}
+
+{% block content %}
+{% if object.pk == request.user.pk %}
+<h1>{% trans "User editing" %}:</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{% trans 'Save' %}">
+</form>
+<br />
+{% if is_not_author %}
+<button><a href="/author/">{% trans 'Become an author' %}</a> </button>
+{% endif %}
+<br />
+{% if subscribes %}
+<H4>{% trans 'My Subscriptions' %}:</H4>
+
+{% for subscribe in subscribes %}
+            <p><b> {{ subscribe }} </b></p>
+{% endfor %}
+{% endif %}
+{% else %}
+<h2>{% trans "You do not have permission to edit this user's profile" %}.</h2>
+{% endif %}
+
+{% endblock content %}
