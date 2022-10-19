@@ -214,10 +214,6 @@ LOGGING = {
     }
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b126f1794bea1362072851dcb25a74ae4107aac2
 ROOT_URLCONF = 'NewsPortal.urls'
 
 TEMPLATES = [

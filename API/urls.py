@@ -4,7 +4,6 @@ from django.urls import include, path
 
 router = routers.DefaultRouter()
 router.register(r'posts', PostViewset)
-# router.register(r'categories', CategoryViewset)
 
 
 urlpatterns = [
